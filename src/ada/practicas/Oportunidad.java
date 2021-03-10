@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Oportunidad {
+public class Oportunidad implements Item{
     Estado estado;
    private List<Item> productoOfrecido;
    private Empresa cliente;
@@ -13,10 +13,11 @@ public class Oportunidad {
    Scanner sc = new Scanner(System.in);
 
 
-    public Oportunidad(List<Item> productoOfrecido, Empresa cliente, LocalDate contactoInicial) {
-        this.productoOfrecido = productoOfrecido;
+    public Oportunidad(List<Item> productoOfrecido, Empresa cliente, LocalDate contactoInicial, Estado estado) {
+        this.productoOfrecido = new ArrayList<>();
         this.cliente = cliente;
         this.contactoInicial = contactoInicial;
+       // this.estado= estado
     }
 
     public Oportunidad() {
@@ -51,7 +52,7 @@ public class Oportunidad {
 
 
     public void mostrarDetalle() {
-        List<Oportunidad> oportunidades= new ArrayList<>();
+        List<Oportunidad>oportunidades=new ArrayList<>();
         for(Oportunidad o: oportunidades){
             System.out.println("Detalle:"+o.getProductoOfrecido());
             System.out.println("Detalle:"+o.getCliente());
@@ -62,7 +63,7 @@ public class Oportunidad {
     }
 
     public void añadirDetalles() {
-
+        List<Oportunidad> oportunidads= new ArrayList<>();
         Oportunidad o = new Oportunidad();
         int opcion=0;
        do {
@@ -104,6 +105,30 @@ public class Oportunidad {
 
        }while (opcion!=0);
 
+    }
+
+    @Override
+    public void calcularCosto() {
+
+    }
+
+    @Override
+    public void mostrarDetalles() {
+
+    }
+
+    @Override
+    public void agrgarElemento() {
+
+    }
+
+    @Override
+    public void eliminarElemento() {
+
+    }
+
+    @Override
+    public void modificarItem() {
 
     }
 }

@@ -12,6 +12,7 @@ public class Vendedor extends Persona{
 
     public Vendedor(String nombre, String cargo) {
         super(nombre, cargo);
+        this.oportunidades= new ArrayList<>();
 
     }
 
@@ -20,6 +21,7 @@ public class Vendedor extends Persona{
     }
 
     public List<Oportunidad> getOportunidades() {
+       List<Oportunidad>oportunidads= new ArrayList<>();
         for (Oportunidad o:oportunidades){
             System.out.println(o.getCliente());
         }
@@ -39,6 +41,8 @@ public class Vendedor extends Persona{
     }
 
     public Oportunidad registrarOportunidad(){
+        List<Oportunidad>Oportunidades =new ArrayList<>();
+
         Oportunidad oportunidad = new Oportunidad();
         oportunidad.añadirDetalles();
         return oportunidad;

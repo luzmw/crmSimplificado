@@ -44,7 +44,7 @@ Sales funnel / embudo de ventas: https://getvoip.com/uploads/sales-funnel.jpg
 
            v.setNombre(nombre);
            System.out.println(v.getNombre() + " desea registrar nueva oportunidad (1)/ver sus oportunidades (2)");
-            opcion=sc.nextInt();
+            opcion=Integer.parseInt(sc.nextLine());
            if (opcion==1) {
                v.registrarOportunidad();
            }else {
