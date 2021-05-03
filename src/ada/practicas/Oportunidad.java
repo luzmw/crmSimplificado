@@ -3,13 +3,18 @@ package ada.practicas;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.Scanner;
 
 public class Oportunidad implements Item{
-    Estado estado;
+   private int idOportunidad;
+   private Estado estado;
    private List<Item> productoOfrecido;
-   private Empresa cliente;
+   private Empresa cliente;//TODO CAMBIAR A CLIENTE CLIENTE?
    private LocalDate contactoInicial;
+   private LocalDate proxximaFechaContacto;
+  private  boolean aceptallamada;
+  private Map <Item,Double> preciosPactados;
    Scanner sc = new Scanner(System.in);
 
 
@@ -50,7 +55,7 @@ public class Oportunidad implements Item{
         this.contactoInicial = contactoInicial;
     }
 
-
+    //TODO borrar código arreglar "ortografía"
     public void mostrarDetalle() {
         List<Oportunidad>oportunidades=new ArrayList<>();
         for(Oportunidad o: oportunidades){
@@ -130,6 +135,17 @@ public class Oportunidad implements Item{
     @Override
     public void modificarItem() {
 
+    }
+
+    @Override
+    public String toString() {
+        return "Oportunidad{" +
+                "estado=" + estado +
+                ", productoOfrecido=" + productoOfrecido +
+                ", cliente=" + cliente +
+                ", contactoInicial=" + contactoInicial +
+                ", sc=" + sc +
+                '}';
     }
 }
 

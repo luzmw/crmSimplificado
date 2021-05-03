@@ -48,4 +48,14 @@ public class Producto extends Elemento implements Item{
     public void modificarItem() {
 
     }
+
+    @Override
+    public String toString() {
+        return "Producto{" +
+                "nombre='" + nombre + '\'' +
+                ", cantidad=" + cantidad +
+                ", descripcion='" + descripcion + '\'' +
+                ", precioUnitario=" + precioUnitario +
+                '}';
+    }
 }

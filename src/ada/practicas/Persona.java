@@ -1,8 +1,13 @@
 package ada.practicas;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 public  class Persona {
-    protected String nombre;
-    protected String cargo;
+
+    private String nombre;
+    private String cargo;
 
     public Persona(String nombre, String cargo) {
         this.nombre = nombre;
@@ -26,6 +31,14 @@ public  class Persona {
 
     public void setCargo(String cargo) {
         this.cargo = cargo;
+    }
+
+    @Override
+    public String toString() {
+        return "Persona{" +
+                "nombre='" + nombre + '\'' +
+                ", cargo='" + cargo + '\'' +
+                '}';
     }
 }
 

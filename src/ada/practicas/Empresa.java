@@ -1,13 +1,13 @@
 package ada.practicas;
 
-public class Empresa {
-    String nombreEmpresa;
-    Persona contacto;
-    boolean aceptaSeguiiento;
+public class Empresa {// empresa proveedora?
+   private String nombreEmpresa;
+   private Cliente cliente;
+   private boolean aceptaSeguiiento;
 
-    public Empresa(String nombreEmpresa, Persona contacto) {
+    public Empresa(String nombreEmpresa, Cliente cliente) {
         this.nombreEmpresa = nombreEmpresa;
-        this.contacto = contacto;
+        this.cliente = cliente;
     }
 
     public Empresa() {
@@ -21,12 +21,12 @@ public class Empresa {
         this.nombreEmpresa = nombreEmpresa;
     }
 
-    public Persona getContacto() {
-        return contacto;
+    public Cliente getCliente() {
+        return cliente;
     }
 
-    public void setContacto(Persona contacto) {
-        this.contacto = contacto;
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
     }
 
     public boolean isAceptaSeguiiento() {
@@ -35,5 +35,14 @@ public class Empresa {
 
     public void setAceptaSeguiiento(boolean aceptaSeguiiento) {
         this.aceptaSeguiiento = aceptaSeguiiento;
+    }
+
+    @Override
+    public String toString() {
+        return "Empresa{" +
+                "nombreEmpresa='" + nombreEmpresa + '\'' +
+                ", cliente=" + cliente +
+                ", aceptaSeguiiento=" + aceptaSeguiiento +
+                '}';
     }
 }

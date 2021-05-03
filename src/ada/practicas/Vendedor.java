@@ -5,10 +5,11 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Vendedor extends Persona{
+    private int idVendedor;
     private List<Oportunidad> oportunidades;
-    private List<Empresa> empresasCliente;
-    //private Vendedor gerente;
-    Scanner scanner= new Scanner(System.in);
+    private List<Empresa> empresasCliente;//Cliente class
+    private Double salario;
+    private Scanner scanner= new Scanner(System.in);
 
     public Vendedor(String nombre, String cargo) {
         super(nombre, cargo);
@@ -20,11 +21,9 @@ public class Vendedor extends Persona{
         super();
     }
 
+
     public List<Oportunidad> getOportunidades() {
-       List<Oportunidad>oportunidads= new ArrayList<>();
-        for (Oportunidad o:oportunidades){
-            System.out.println(o.getCliente());
-        }
+
         return oportunidades;
     }
 
@@ -48,6 +47,21 @@ public class Vendedor extends Persona{
         return oportunidad;
 
     }
+    /* public String
 
+List<Oportunidad>oportunidads= new ArrayList<>();
+        for (Oportunidad o:oportunidades){
+            System.out.println(o.getCliente());
+        }
+        
+     */
 
+    @Override
+    public String toString() {
+        return "Vendedor{" +
+                "oportunidades=" + oportunidades +
+                ", empresasCliente=" + empresasCliente +
+                ", scanner=" + scanner +
+                '}';
+    }
 }
