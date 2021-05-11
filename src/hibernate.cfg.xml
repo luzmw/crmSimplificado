@@ -12,7 +12,9 @@
         <property name="hibernate.connection.password">cipreses00</property>
         <property name="hibernate.show_sql">true</property>
 
-        <mapping class="ada.practicas.Cliente" />
+        <mapping class="Entidades.Persona" />
+        <mapping class="Entidades.Cliente" />
+
 
     </session-factory>
 </hibernate-configuration>

@@ -1,13 +1,12 @@
 package ada.practicas;
 
+import DAO.ClienteDAO;
+import Entidades.Cliente;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
-import java.util.Scanner;
 
 public class Main {
 
@@ -41,7 +40,7 @@ Sales funnel / embudo de ventas: https://getvoip.com/uploads/sales-funnel.jpg
             for (Cliente c : clientes)
                 System.out.println(c);
 
-            Cliente unCliente= new Cliente("pato","asesor","232222222", "oporto","pato@ddd.com");
+            Cliente unCliente= new Cliente("luis","2523652","jdjdj@df.com", "gerente", "demos",true );
             session.beginTransaction();
             session.save(unCliente);
             session.getTransaction().commit();
@@ -50,12 +49,12 @@ Sales funnel / embudo de ventas: https://getvoip.com/uploads/sales-funnel.jpg
 
 
     //código Pablo
-        for(Cliente cliente: ClienteDao.getClientes())
+        for(Cliente cliente: ClienteDAO.getClientes())
             System.out.println(cliente);
 
-        Cliente nuevoCliente = new Cliente("sabri","ceo","discord","3838383","sabri@discord.com");
+        Cliente nuevoCliente = new Cliente("sabri","22352365","dd@eeeee.com","asistente","company", false);
 
-        ClienteDao.guardarCliente(nuevoCliente);
+        ClienteDAO.guardarCliente(nuevoCliente);
 
 
     }

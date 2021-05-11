@@ -1,4 +1,4 @@
-package ada.practicas;
+package Entidades;
 
 public class Empresa {// empresa proveedora?
    private String nombreEmpresa;

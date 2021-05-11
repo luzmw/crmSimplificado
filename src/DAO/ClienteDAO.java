@@ -1,12 +1,13 @@
-package ada.practicas;
+package DAO;
 
+import Entidades.Cliente;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
 import java.util.List;
 
-public abstract class ClienteDao {
+public  class ClienteDAO {
     private static SessionFactory sf = new Configuration().configure().buildSessionFactory();
 
     public static List<Cliente> getClientes(){
@@ -21,3 +22,5 @@ public abstract class ClienteDao {
         session.getTransaction().commit();
     }
 }
+
+

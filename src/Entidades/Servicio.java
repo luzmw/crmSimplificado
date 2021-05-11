@@ -1,6 +1,6 @@
-package ada.practicas;
+package Entidades;
 
-public class Servicio extends Elemento  implements Item {
+public class Servicio extends Elemento implements Item {
     private Double valorHora;
     private Persona profesional;
 

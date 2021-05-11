@@ -1,4 +1,4 @@
-package ada.practicas;
+package Entidades;
 
 public class Elemento {
     protected String nombre;

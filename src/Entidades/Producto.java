@@ -1,6 +1,9 @@
-package ada.practicas;
+package Entidades;
 
-public class Producto extends Elemento implements Item{
+import Entidades.Elemento;
+import Entidades.Item;
+
+public class Producto extends Elemento implements Item {
     private Double precioUnitario;
 
 

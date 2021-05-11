@@ -1,4 +1,4 @@
-package ada.practicas;
+package Entidades;
 
 public interface Item {
     void calcularCosto();
